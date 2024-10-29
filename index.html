@@ -445,7 +445,7 @@ function fetchUserCount() {
     fetch('./?user_count=true')
         .then(response => response.json())
         .then(data => {
-            document.getElementById('userCount').innerText = data.user_count;
+            document.getElementById('userCount').innerText = data.user_count.html;
         })
         .catch(error => {
             console.error('Error fetching user count:', error);
